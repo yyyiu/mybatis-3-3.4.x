@@ -28,8 +28,7 @@ public class TestMybatis {
 
     /**
      * 使用java配置，不用xml文件
-     *
-     * @return
+     * @return sqlSessionFactory
      */
     public static SqlSessionFactory initJava() {
         LogFactory.useLog4JLogging();
@@ -37,7 +36,7 @@ public class TestMybatis {
         TransactionFactory transactionFactory = new JdbcTransactionFactory();
         Environment environment = new Environment("development", transactionFactory, dataSource);
         Configuration configuration = new Configuration(environment);
-//        configuration.addInterceptor(new InterceptionPlug());
+        configuration.addInterceptor(new InterceptionPlug());// 添加拦截器
         configuration.addMapper(UserMapper.class);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
         return sqlSessionFactory;
@@ -45,8 +44,7 @@ public class TestMybatis {
 
     /**
      * 使用xml文件进行配置
-     *
-     * @return
+     * @return sqlSessionFactory
      * @throws IOException
      */
     public static SqlSessionFactory initXml() throws IOException {
