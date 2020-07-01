@@ -13,10 +13,10 @@ import java.util.List;
  */
 public interface UserMapper {
 
-    @Select("select count(*) from tb_user")
+    @Select("select count(*) from mybatisuser")
     public int count();
 
-    @Select("select id,username,password from tb_user")
+    @Select("select id,username,password from mybatisuser")
     public List<UserEntity> select();
 
 }
