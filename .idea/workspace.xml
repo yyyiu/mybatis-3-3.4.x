@@ -20,13 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8153956-79f9-4bb6-83a8-d0ef5cf60dd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_6_0_ALPHA.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/Executor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/loader/ProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/loader/ProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/parameter/ParameterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/parameter/ParameterHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/ResultSetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/ResultSetHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/StatementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/StatementHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/jdbc/AbstractSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/jdbc/AbstractSQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/jdbc/SqlRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/jdbc/SqlRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/TestMybatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/TestMybatis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/MappedStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/MappedStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/reflection/factory/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/reflection/factory/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/type/TypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/type/TypeHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +174,7 @@
       <workItem from="1592573656526" duration="5865000" />
       <workItem from="1592729715602" duration="623000" />
       <workItem from="1593483369261" duration="431000" />
-      <workItem from="1593564660670" duration="1419000" />
+      <workItem from="1593564660670" duration="9585000" />
     </task>
     <servers />
   </component>
@@ -240,18 +246,18 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593563971042" />
-    <state x="540" y="258" key="IDE.errors.dialog" timestamp="1588572424236">
+    <state x="540" y="258" key="IDE.errors.dialog" timestamp="1593568436410">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="540" y="258" key="IDE.errors.dialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588572424236" />
+    <state x="540" y="258" key="IDE.errors.dialog/0.0.1920.1050@0.0.1920.1050" timestamp="1593568436410" />
     <state x="440" y="99" key="SettingsEditor" timestamp="1588569041863">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1588569041863" />
-    <state x="681" y="266" width="582" height="524" key="StructurePopup" timestamp="1593514178649">
+    <state x="681" y="266" width="582" height="524" key="StructurePopup" timestamp="1593575124931">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="681" y="266" width="582" height="524" key="StructurePopup/0.0.1920.1050@0.0.1920.1050" timestamp="1593514178649" />
+    <state x="681" y="266" width="582" height="524" key="StructurePopup/0.0.1920.1050@0.0.1920.1050" timestamp="1593575124931" />
     <state x="716" y="368" key="cloudConfig.PluginsDialog" timestamp="1593563392000">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -268,10 +274,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="661" y="256" width="598" height="562" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1588676797401" />
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1593515420965">
+    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1593584548732">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593515420965" />
+    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593584548732" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -19,8 +19,7 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * MyBatis uses an ObjectFactory to create all needed new Objects.
- * 
+ * 用于创建Mapper映射实体对象
  * @author Clinton Begin
  */
 public interface ObjectFactory {

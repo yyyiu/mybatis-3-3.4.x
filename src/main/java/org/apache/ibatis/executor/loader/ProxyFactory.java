@@ -22,6 +22,8 @@ import org.apache.ibatis.reflection.factory.ObjectFactory;
 import org.apache.ibatis.session.Configuration;
 
 /**
+ * 代理工程接口，实现类：CglibProxyFactory 和 JavassistProxyFactory
+ * 用于创建Mapper映射实体对象的动态代理对象，通过动态代理来实现MyBatis中的懒加载机制
  * @author Eduardo Macarron
  */
 public interface ProxyFactory {

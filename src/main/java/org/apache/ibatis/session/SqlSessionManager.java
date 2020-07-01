@@ -39,6 +39,10 @@ public class SqlSessionManager implements SqlSessionFactory, SqlSession {
 
   private final ThreadLocal<SqlSession> localSqlSession = new ThreadLocal<SqlSession>();
 
+  /**
+   * 私有化构造器，只能通过newInstance方法实例化
+   * @param sqlSessionFactory
+   */
   private SqlSessionManager(SqlSessionFactory sqlSessionFactory) {
     this.sqlSessionFactory = sqlSessionFactory;
     this.sqlSessionProxy = (SqlSession) Proxy.newProxyInstance(

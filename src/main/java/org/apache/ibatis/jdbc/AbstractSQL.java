@@ -21,7 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 进行sql语句的拼接处理
+ * 在java代码中进行sql语句的动态拼接处理
  *
  * @author Clinton Begin
  * @author Jeff Butler

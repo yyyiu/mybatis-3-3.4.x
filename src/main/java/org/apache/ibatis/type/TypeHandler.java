@@ -21,6 +21,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
+ * 是MyBatis中的类型处理器，用于处理Java类型与JDBC类型之间的映射。
+ * 它的作用主要体现在能够根据Java类型调用PreparedStatement或CallableStatement对象
+ * 对应的setXXX()方法为Statement对象设置值，而且能够根据Java类型调用ResultSet对象对应的getXXX()获取SQL执行结果
  * @author Clinton Begin
  */
 public interface TypeHandler<T> {

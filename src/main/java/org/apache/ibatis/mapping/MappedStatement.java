@@ -29,6 +29,8 @@ import org.apache.ibatis.scripting.LanguageDriver;
 import org.apache.ibatis.session.Configuration;
 
 /**
+ * 用于描述Mapper中的SQL配置信息，是对Mapper的XML配置文件中<select|update|delete|insert>
+ *     等标签或者@Select/@Update等注解配置信息的封装
  * @author Clinton Begin
  */
 public final class MappedStatement {

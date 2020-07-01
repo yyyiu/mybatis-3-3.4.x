@@ -23,6 +23,8 @@ import java.sql.Statement;
 import java.util.List;
 
 /**
+ * 封装了对JDBC中的ResultSet对象操作，
+ * 当执行SQL类型为SELECT语句时，ResultSetHandler用于将查询结果转换成Java对象
  * @author Clinton Begin
  */
 public interface ResultSetHandler {

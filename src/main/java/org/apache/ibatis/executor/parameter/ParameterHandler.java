@@ -19,8 +19,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- * A parameter handler sets the parameters of the {@code PreparedStatement}
- *
+ * 用于为Statement对象参数占位符设置值
  * @author Clinton Begin
  */
 public interface ParameterHandler {
