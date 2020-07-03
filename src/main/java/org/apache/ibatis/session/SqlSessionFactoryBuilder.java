@@ -74,7 +74,7 @@ public class SqlSessionFactoryBuilder {
 
     public SqlSessionFactory build(InputStream inputStream, String environment, Properties properties) {
         try {
-            // 创建配置文件解析器
+            // 创建配置文件XPath解析器，这里也创建了Document对象
             XMLConfigBuilder parser = new XMLConfigBuilder(inputStream, environment, properties);
             // 调用 parse() 方法，生成 Configuration 对象
             return build(parser.parse());

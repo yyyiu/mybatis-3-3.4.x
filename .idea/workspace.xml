@@ -21,18 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b8153956-79f9-4bb6-83a8-d0ef5cf60dd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/parameter/ParameterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/parameter/ParameterHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/ResultSetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/ResultSetHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/CallableStatementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/CallableStatementHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/PreparedStatementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/PreparedStatementHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/RoutingStatementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/RoutingStatementHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/SimpleStatementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/SimpleStatementHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/StatementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/StatementHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/MappedStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/MappedStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/defaults/DefaultParameterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/defaults/DefaultParameterHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/type/TypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/type/TypeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/type/TypeHandlerRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/type/TypeHandlerRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/parsing/XPathParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/parsing/XPathParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionFactoryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionFactoryBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +166,7 @@
       <workItem from="1592729715602" duration="623000" />
       <workItem from="1593483369261" duration="431000" />
       <workItem from="1593564660670" duration="9585000" />
-      <workItem from="1593688571389" duration="15713000" />
+      <workItem from="1593688571389" duration="20005000" />
     </task>
     <servers />
   </component>
@@ -275,14 +266,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="661" y="256" width="598" height="562" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1588676797401" />
-    <state width="634" height="239" key="javadoc.popup.new" timestamp="1593743133924">
+    <state width="634" height="239" key="javadoc.popup.new" timestamp="1593765515663">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="634" height="239" key="javadoc.popup.new/0.0.1920.1050@0.0.1920.1050" timestamp="1593743133924" />
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1593748310692">
+    <state width="634" height="239" key="javadoc.popup.new/0.0.1920.1050@0.0.1920.1050" timestamp="1593765515663" />
+    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1593761922847">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593748310692" />
+    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593761922847" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

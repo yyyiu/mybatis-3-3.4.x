@@ -92,23 +92,22 @@ public class XMLConfigBuilder extends BaseBuilder {
     }
 
     public Configuration parse() {
+        // 防止一个Configuration被创建多次
         if (parsed) {
             throw new BuilderException("Each XMLConfigBuilder can only be used once.");
         }
         parsed = true;
-        // 这里开始解析文件了，因为mybatis的主要配置文件 sqlConfig 就是从 configuration 这个标签开始的
+        // 解析文件，从mybatis配置文件的头结点configuration开始
         parseConfiguration(parser.evalNode("/configuration"));
         return configuration;
     }
 
     /**
-     * 解析mybatis的主要xml配置文件
-     *
+     * 对xml文件的Node进行解析
      * @param root
      */
     private void parseConfiguration(XNode root) {
         try {
-            //issue #117 read properties first
             // 首先读取 properties 文件
             propertiesElement(root.evalNode("properties"));
             // 解析 settings 配置，并将其转换为 Properties 对象
@@ -122,7 +121,6 @@ public class XMLConfigBuilder extends BaseBuilder {
             reflectorFactoryElement(root.evalNode("reflectorFactory"));
             // 将setting中的信息设置到Configuration中去
             settingsElement(settings);
-            // read it after objectFactory and objectWrapperFactory issue #631
             // 解析environments
             environmentsElement(root.evalNode("environments"));
             // 解析 databaseIdProvider，获取并设置 databaseId 到 Configuration 对象
@@ -397,7 +395,7 @@ public class XMLConfigBuilder extends BaseBuilder {
                     // 从指定包中查找 mapper 接口，并根据 mapper 接口解析映射配置
                     configuration.addMappers(mapperPackage);
 
-                // 否则就是从 resource/url/class 等属性中获取
+                    // 否则就是从 resource/url/class 等属性中获取
                 } else {
                     String resource = child.getStringAttribute("resource");
                     String url = child.getStringAttribute("url");
@@ -410,13 +408,13 @@ public class XMLConfigBuilder extends BaseBuilder {
                         XMLMapperBuilder mapperParser = new XMLMapperBuilder(inputStream, configuration, resource, configuration.getSqlFragments());
                         mapperParser.parse();
 
-                    // 通过url查找
+                        // 通过url查找
                     } else if (resource == null && url != null && mapperClass == null) {
                         ErrorContext.instance().resource(url);
                         InputStream inputStream = Resources.getUrlAsStream(url);
                         XMLMapperBuilder mapperParser = new XMLMapperBuilder(inputStream, configuration, url, configuration.getSqlFragments());
                         mapperParser.parse();
-                    // 通过mapperClass查找
+                        // 通过mapperClass查找
                     } else if (resource == null && url == null && mapperClass != null) {
                         Class<?> mapperInterface = Resources.classForName(mapperClass);
                         configuration.addMapper(mapperInterface);
