@@ -34,10 +34,15 @@ import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.transaction.Transaction;
 
 /**
+ * 对JDBC中的Statement对象做了缓存，当执行相同的SQL语句时，直接从缓存中取出Statement对象进行复用，
+ * 避免了频繁创建和销毁Statement对象，从而提升系统性能，用到了享元模式
  * @author Clinton Begin
  */
 public class ReuseExecutor extends BaseExecutor {
 
+  /**
+   * 用来进行缓存Statement
+   */
   private final Map<String, Statement> statementMap = new HashMap<String, Statement>();
 
   public ReuseExecutor(Configuration configuration, Transaction transaction) {

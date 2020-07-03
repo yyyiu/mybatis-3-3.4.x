@@ -1,13 +1,13 @@
 package top.yyiu.mybatis;
 
+import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.logging.LogFactory;
 import org.apache.ibatis.mapping.Environment;
-import org.apache.ibatis.session.Configuration;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.ibatis.mapping.MappedStatement;
+import org.apache.ibatis.session.*;
 import org.apache.ibatis.transaction.TransactionFactory;
+import org.apache.ibatis.transaction.jdbc.JdbcTransaction;
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 import org.junit.Test;
 import top.yyiu.mybatis.dao.UserMapper;
@@ -16,6 +16,8 @@ import top.yyiu.mybatis.plugin.InterceptionPlug;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.SQLException;
+import java.util.List;
 
 /**
  * 作用于：
@@ -64,5 +66,19 @@ public class TestMybatis {
         userMapper.select();
         System.out.println(userMapper.count());
         userMapper.select();
+    }
+
+    public void testExecutor(){
+        try {
+            SqlSessionFactory sqlSessionFactory = initXml();
+            SqlSession session = sqlSessionFactory.openSession();
+            Configuration configuration = sqlSessionFactory.getConfiguration();
+            Executor executor = configuration.newExecutor(new JdbcTransaction(session.getConnection()), ExecutorType.SIMPLE);
+            MappedStatement listAllStms = configuration.getMappedStatement("这个是mapper中的查询id，写全路径名称");
+            List<Object> list = executor.query(listAllStms, null, RowBounds.DEFAULT, Executor.NO_RESULT_HANDLER);//直接操作数据库
+            System.out.println(list);
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

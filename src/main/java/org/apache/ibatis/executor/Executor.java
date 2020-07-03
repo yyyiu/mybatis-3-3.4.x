@@ -29,7 +29,8 @@ import org.apache.ibatis.transaction.Transaction;
 
 /**
  * 是MyBatis的SQL执行器，
- * MyBatis中对数据库所有的增删改查操作都是由Executor组件完成的
+ * MyBatis中对数据库所有的增删改查操作都是由Executor组件完成的<br/>
+ * 实现子类有BaseExecutor和CachingExecutor
  * @author Clinton Begin
  */
 public interface Executor {

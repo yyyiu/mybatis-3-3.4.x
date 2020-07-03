@@ -32,6 +32,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * 简单Executor，可以完成基础的增删改查功能
  * @author Clinton Begin
  */
 public class SimpleExecutor extends BaseExecutor {

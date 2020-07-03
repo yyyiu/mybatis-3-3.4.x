@@ -92,69 +92,161 @@ import org.apache.ibatis.type.TypeHandler;
 import org.apache.ibatis.type.TypeHandlerRegistry;
 
 /**
- * 保存mybatis的主配置信息
+ * 保存mybatis的主配置信息，这些配置信息可以在 mybatis配置文件下面的 setting 节点中添加
+ *
  * @author Clinton Begin
  */
 public class Configuration {
 
     protected Environment environment;
-
+    /**
+     * 允许在嵌套语句中使用分页RowBound，如果为false说明可以使用
+     */
     protected boolean safeRowBoundsEnabled;
     protected boolean safeResultHandlerEnabled = true;
+    /**
+     * 是否开启自动驼峰命名规则映射，列名和java属性对应
+     */
     protected boolean mapUnderscoreToCamelCase;
+    /**
+     * 是否按需加载，如果为true，就是加载对象的全部属性
+     */
     protected boolean aggressiveLazyLoading;
+    /**
+     * 是否允许单一语句返回多个结果集，默认true
+     */
     protected boolean multipleResultSetsEnabled = true;
+    /**
+     * 允许JDBC自动生成主键，默认为false
+     */
     protected boolean useGeneratedKeys;
+    /**
+     * 使用列标签代替列名，默认为true
+     */
     protected boolean useColumnLabel = true;
+    /**
+     * 是否开启二级缓存，默认true
+     */
     protected boolean cacheEnabled = true;
     protected boolean callSettersOnNulls;
+    /**
+     * 允许使用方法签名中的名称做为语句参数名称
+     */
     protected boolean useActualParamName = true;
     protected boolean returnInstanceForEmptyRow;
-
+    /**
+     * mybatis的日志前缀
+     */
     protected String logPrefix;
+    /**
+     * 日志实现类
+     */
     protected Class<? extends Log> logImpl;
     protected Class<? extends VFS> vfsImpl;
+    /**
+     * 本地缓存机制防止循环引用和加速重复查询，默认为 SESSION
+     */
     protected LocalCacheScope localCacheScope = LocalCacheScope.SESSION;
+    /**
+     * 没有为参数指定JDBC类型时，指定JDBC类型的值为null，默认为 OTHER
+     */
     protected JdbcType jdbcTypeForNull = JdbcType.OTHER;
+    /**
+     * 指定哪个对象的方法会触发懒加载
+     */
     protected Set<String> lazyLoadTriggerMethods = new HashSet<String>(Arrays.asList(new String[]{"equals", "clone", "hashCode", "toString"}));
+    /**
+     * 默认等待驱动响应的超时时间
+     */
     protected Integer defaultStatementTimeout;
     protected Integer defaultFetchSize;
+    /**
+     * 配置默认 Executor 类型，默认为SIMPLE普通的 Executor
+     */
     protected ExecutorType defaultExecutorType = ExecutorType.SIMPLE;
+    /**
+     * 指定mybatis应该如何自动映射列到Java实体属性，默认为 PARTIAL
+     */
     protected AutoMappingBehavior autoMappingBehavior = AutoMappingBehavior.PARTIAL;
+    /**
+     * 指定如果发现自动映射目标未知列时的行为，默认为 NONE
+     */
     protected AutoMappingUnknownColumnBehavior autoMappingUnknownColumnBehavior = AutoMappingUnknownColumnBehavior.NONE;
 
     protected Properties variables = new Properties();
     protected ReflectorFactory reflectorFactory = new DefaultReflectorFactory();
     protected ObjectFactory objectFactory = new DefaultObjectFactory();
     protected ObjectWrapperFactory objectWrapperFactory = new DefaultObjectWrapperFactory();
-
+    /**
+     * 是否懒加载，默认为false
+     */
     protected boolean lazyLoadingEnabled = false;
+    /**
+     * 指定创建延迟加载时的代理工厂
+     */
     protected ProxyFactory proxyFactory = new JavassistProxyFactory(); // #224 Using internal Javassist instead of OGNL
 
     protected String databaseId;
     /**
-     * Configuration factory class.
-     * Used to create Configuration for loading deserialized unread properties.
-     *
-     * @see <a href='https://code.google.com/p/mybatis/issues/detail?id=300'>Issue 300 (google code)</a>
+     * Configuration的工厂类
+     * 返回Configuration实例用来加载反序列化对象的懒加载属性
      */
     protected Class<?> configurationFactory;
 
+    /**
+     * 用于注册Mybatis接口信息，建立Mapper接口的Class对象和MapperProxyFactory之间的关系
+     */
     protected final MapperRegistry mapperRegistry = new MapperRegistry(this);
+    /**
+     * 注册Mybatis插件信息，插件就是一个拦截器
+     */
     protected final InterceptorChain interceptorChain = new InterceptorChain();
+    /**
+     * 注册TypeHandler，并建立Jdbc类型、JDBC类型与TypeHandler之间的对应关系
+     */
     protected final TypeHandlerRegistry typeHandlerRegistry = new TypeHandlerRegistry();
+    /**
+     * 注册所有的类型别名
+     */
     protected final TypeAliasRegistry typeAliasRegistry = new TypeAliasRegistry();
+    /**
+     * 动态sql生成的默认语言
+     */
     protected final LanguageDriverRegistry languageRegistry = new LanguageDriverRegistry();
-
+    /**
+     * MappedStatement对象描述<insert|select|update|delete>等标签或者通过@Select、@Delete、@Update、@Insert等注解配置的SQL信息.
+     * key 是 mapper的id，value是MappedStatement对象
+     */
     protected final Map<String, MappedStatement> mappedStatements = new StrictMap<MappedStatement>("Mapped Statements collection");
+    /**
+     * 注册Mapper中配置的所有缓存信息
+     */
     protected final Map<String, Cache> caches = new StrictMap<Cache>("Caches collection");
+    /**
+     * 注册Mapper配置文件中通过<resultMap>标签配置的ResultMap信息
+     */
     protected final Map<String, ResultMap> resultMaps = new StrictMap<ResultMap>("Result Maps collection");
+    /**
+     * 注册Mapper中通过<parameterMap>标签注册的参数映射信息
+     */
     protected final Map<String, ParameterMap> parameterMaps = new StrictMap<ParameterMap>("Parameter Maps collection");
+    /**
+     * 注册主键生成器，mybatis提供了三种，一种数据库主键自增，一种无自增主键，一种通过select查询最大主键，比如oracle的sequence
+     */
     protected final Map<String, KeyGenerator> keyGenerators = new StrictMap<KeyGenerator>("Key Generators collection");
 
+    /**
+     * 注册所有Mapper XML配置文件路径
+     */
     protected final Set<String> loadedResources = new HashSet<String>();
+    /**
+     * 注册Mapper中通过<sql>标签配置的SQL片段
+     */
     protected final Map<String, XNode> sqlFragments = new StrictMap<XNode>("XML fragments parsed from previous mappers");
 
+    /**
+     * 出现异常的Statement
+     */
     protected final Collection<XMLStatementBuilder> incompleteStatements = new LinkedList<XMLStatementBuilder>();
     protected final Collection<CacheRefResolver> incompleteCacheRefs = new LinkedList<CacheRefResolver>();
     protected final Collection<ResultMapResolver> incompleteResultMaps = new LinkedList<ResultMapResolver>();
@@ -471,6 +563,7 @@ public class Configuration {
     /**
      * Set a default {@link TypeHandler} class for {@link Enum}.
      * A default {@link TypeHandler} is {@link org.apache.ibatis.type.EnumTypeHandler}.
+     *
      * @param typeHandler a type handler class for {@link Enum}
      * @since 3.4.5
      */
@@ -526,6 +619,10 @@ public class Configuration {
         return languageRegistry;
     }
 
+    /**
+     * 设置默认的动态sql脚本语言为XML
+     * @param driver
+     */
     public void setDefaultScriptingLanguage(Class<?> driver) {
         if (driver == null) {
             driver = XMLLanguageDriver.class;
@@ -537,7 +634,9 @@ public class Configuration {
         return languageRegistry.getDefaultDriver();
     }
 
-    /** @deprecated Use {@link #getDefaultScriptingLanguageInstance()} */
+    /**
+     * @deprecated Use {@link #getDefaultScriptingLanguageInstance()}
+     */
     @Deprecated
     public LanguageDriver getDefaultScriptingLanuageInstance() {
         return getDefaultScriptingLanguageInstance();
@@ -568,6 +667,12 @@ public class Configuration {
         return statementHandler;
     }
 
+    /**
+     * 创建 Executor，采用工厂模式中简单工厂模式，SIMPLE——>SimpleExecutor,BATCH——>BatchExecutor,REUSE——>ReuseExecutor
+     * 创建完毕之后最后添加拦截器
+     * @param transaction
+     * @return
+     */
     public Executor newExecutor(Transaction transaction) {
         return newExecutor(transaction, defaultExecutorType);
     }
@@ -587,7 +692,7 @@ public class Configuration {
         if (cacheEnabled) {
             executor = new CachingExecutor(executor);
         }
-        // 添加插件
+        // 添加拦截器
         executor = (Executor) interceptorChain.pluginAll(executor);
         return executor;
     }

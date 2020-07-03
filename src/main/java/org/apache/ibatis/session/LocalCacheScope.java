@@ -16,6 +16,7 @@
 package org.apache.ibatis.session;
 
 /**
+ * 本地缓存，SESSION 表示缓存会话中的所有查询，STATEMENT 表示本地会话只在 statement中执行，相同的sqlSession不同调用不会数据共享
  * @author Eduardo Macarron
  */
 public enum LocalCacheScope {

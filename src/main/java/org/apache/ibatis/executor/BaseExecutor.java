@@ -45,6 +45,10 @@ import org.apache.ibatis.transaction.Transaction;
 import org.apache.ibatis.type.TypeHandlerRegistry;
 
 /**
+ * 基础Executor，通用逻辑在这层，具体实现在子类，采用模板模式，子类有：<br/>
+ * SimpleExecutor：简单Executor，可以完成基础的增删改查功能<br/>
+ * ReuseExecutor：对JDBC中的Statement对象做了缓存<br/>
+ * BatchExecutor：会对调用同一个Mapper执行的update、insert和delete操作，调用Statement对象的批量操作功能
  * @author Clinton Begin
  */
 public abstract class BaseExecutor implements Executor {

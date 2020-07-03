@@ -33,6 +33,7 @@ import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.transaction.Transaction;
 
 /**
+ * 如果mybatis开启了二级缓存，该类会对BaseExecutor子类进行封装，提供为查询添加二级缓存的功能，这是装饰器模式
  * @author Clinton Begin
  * @author Eduardo Macarron
  */

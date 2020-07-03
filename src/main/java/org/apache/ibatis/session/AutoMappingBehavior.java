@@ -16,24 +16,24 @@
 package org.apache.ibatis.session;
 
 /**
- * Specifies if and how MyBatis should automatically map columns to fields/properties.
+ * 指定MyBatis是否以及如何自动将列映射到字段/属性
  * 
  * @author Eduardo Macarron
  */
 public enum AutoMappingBehavior {
 
   /**
-   * Disables auto-mapping.
+   * NONE表示取消自动映射
    */
   NONE,
 
   /**
-   * Will only auto-map results with no nested result mappings defined inside.
+   * PARTIAL只会自动映射没有定义嵌套的结果集
    */
   PARTIAL,
 
   /**
-   * Will auto-map result mappings of any complexity (containing nested or otherwise).
+   * FULL自动映射复杂的结果集
    */
   FULL
 }

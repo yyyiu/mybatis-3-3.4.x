@@ -21,18 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b8153956-79f9-4bb6-83a8-d0ef5cf60dd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/Executor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/loader/ProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/loader/ProxyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/parameter/ParameterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/parameter/ParameterHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/ResultSetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/ResultSetHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/StatementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/StatementHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/jdbc/AbstractSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/jdbc/AbstractSQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/MappedStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/MappedStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/reflection/factory/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/reflection/factory/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/ReuseExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/ReuseExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/SimpleExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/SimpleExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/AutoMappingBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/AutoMappingBehavior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/AutoMappingUnknownColumnBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/AutoMappingUnknownColumnBehavior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/type/TypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/type/TypeHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/ExecutorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/ExecutorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/LocalCacheScope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/LocalCacheScope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/TestMybatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/TestMybatis.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +174,7 @@
       <workItem from="1592729715602" duration="623000" />
       <workItem from="1593483369261" duration="431000" />
       <workItem from="1593564660670" duration="9585000" />
+      <workItem from="1593688571389" duration="10377000" />
     </task>
     <servers />
   </component>
@@ -254,10 +254,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1588569041863" />
-    <state x="681" y="266" width="582" height="524" key="StructurePopup" timestamp="1593575124931">
+    <state x="681" y="266" width="582" height="524" key="StructurePopup" timestamp="1593741270748">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="681" y="266" width="582" height="524" key="StructurePopup/0.0.1920.1050@0.0.1920.1050" timestamp="1593575124931" />
+    <state x="681" y="266" width="582" height="524" key="StructurePopup/0.0.1920.1050@0.0.1920.1050" timestamp="1593741270748" />
     <state x="716" y="368" key="cloudConfig.PluginsDialog" timestamp="1593563392000">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -274,10 +274,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="661" y="256" width="598" height="562" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1588676797401" />
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1593584548732">
+    <state width="634" height="239" key="javadoc.popup.new" timestamp="1593740150668">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593584548732" />
+    <state width="634" height="239" key="javadoc.popup.new/0.0.1920.1050@0.0.1920.1050" timestamp="1593740150668" />
+    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1593741369701">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593741369701" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

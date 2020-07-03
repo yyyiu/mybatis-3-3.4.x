@@ -16,6 +16,7 @@
 package org.apache.ibatis.session;
 
 /**
+ * Executor 类型，SIMPLE 是普通的 Executor，REUSE执行器会复用Statement对象，BATCH会批量执行所有更新语句
  * @author Clinton Begin
  */
 public enum ExecutorType {
