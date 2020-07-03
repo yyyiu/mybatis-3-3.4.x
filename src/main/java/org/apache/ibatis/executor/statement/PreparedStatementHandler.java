@@ -32,6 +32,7 @@ import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
 
 /**
+ * 封装了对JDBC PreparedStatement对象的操作
  * @author Clinton Begin
  */
 public class PreparedStatementHandler extends BaseStatementHandler {

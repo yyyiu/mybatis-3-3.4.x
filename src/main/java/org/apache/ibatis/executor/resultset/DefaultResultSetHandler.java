@@ -176,9 +176,6 @@ public class DefaultResultSetHandler implements ResultSetHandler {
         }
     }
 
-    //
-    // HANDLE RESULT SETS
-    //
     @Override
     public List<Object> handleResultSets(Statement stmt) throws SQLException {
         ErrorContext.instance().activity("handling results").object(mappedStatement.getId());
@@ -186,9 +183,9 @@ public class DefaultResultSetHandler implements ResultSetHandler {
         final List<Object> multipleResults = new ArrayList<Object>();
 
         int resultSetCount = 0;
-        // 获取第一个结果集
+        // 获取第一个结果集，包装为 ResultSetWrapper
         ResultSetWrapper rsw = getFirstResultSet(stmt);
-
+        // 获取ResultMap信息
         List<ResultMap> resultMaps = mappedStatement.getResultMaps();
         int resultMapCount = resultMaps.size();
         validateResultMapsCount(rsw, resultMapCount);
@@ -202,7 +199,7 @@ public class DefaultResultSetHandler implements ResultSetHandler {
             resultSetCount++;
         }
 
-        // 以下逻辑均与多结果集有关，就不分析了，代码省略
+        // 处理结果集：这个是<select>标签中的resultSets属性
         String[] resultSets = mappedStatement.getResultSets();
         if (resultSets != null) {
             while (rsw != null && resultSetCount < resultSets.length) {
@@ -217,7 +214,7 @@ public class DefaultResultSetHandler implements ResultSetHandler {
                 resultSetCount++;
             }
         }
-
+        // 对multipleResults进行处理，有几个结果集返回多少个
         return collapseSingleResultList(multipleResults);
     }
 

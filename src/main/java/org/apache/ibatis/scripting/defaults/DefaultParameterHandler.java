@@ -72,10 +72,10 @@ public class DefaultParameterHandler implements ParameterHandler {
                 // 检测参数类型，排除掉 mode 为 OUT 类型的 parameterMapping
                 if (parameterMapping.getMode() != ParameterMode.OUT) {
                     Object value;
-                    // 获取属性名
+                    // 获取参数的属性名
                     String propertyName = parameterMapping.getProperty();
-                    // 检测 BoundSql 的 additionalParameters 是否包含 propertyName
-                    if (boundSql.hasAdditionalParameter(propertyName)) { // issue #448 ask first for additional params
+                    // 根据属性名获取对应的参数值
+                    if (boundSql.hasAdditionalParameter(propertyName)) {
                         value = boundSql.getAdditionalParameter(propertyName);
                     } else if (parameterObject == null) {
                         value = null;
@@ -92,6 +92,7 @@ public class DefaultParameterHandler implements ParameterHandler {
                         // 从用户传入的参数中获取 propertyName 对应的值
                         value = metaObject.getValue(propertyName);
                     }
+                    // 获取对应的TypeHandle
                     TypeHandler typeHandler = parameterMapping.getTypeHandler();
                     JdbcType jdbcType = parameterMapping.getJdbcType();
                     if (value == null && jdbcType == null) {

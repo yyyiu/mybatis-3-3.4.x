@@ -195,6 +195,12 @@ public final class TypeHandlerRegistry {
     return ALL_TYPE_HANDLERS_MAP.get(handlerType);
   }
 
+  /**
+   * 通过java类型或者jdbc类型获取对应的TypeHandler
+   * @param type
+   * @param <T>
+   * @return
+   */
   public <T> TypeHandler<T> getTypeHandler(Class<T> type) {
     return getTypeHandler((Type) type, null);
   }

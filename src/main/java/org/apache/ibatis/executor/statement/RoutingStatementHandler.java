@@ -30,7 +30,8 @@ import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
 
 /**
- * RoutingStatementHandler 的构造方法会根据 MappedStatement 中的 statementType 变量创建不同的 StatementHandler 实现类。默认情况下，statementType 值为 PREPARED
+ * RoutingStatementHandler 的构造方法会根据 MappedStatement（mapper配置） 中的 statementType 变量
+ * 创建不同的 StatementHandler 实现类。默认情况下，statementType 值为 PREPARED
  * @author Clinton Begin
  */
 public class RoutingStatementHandler implements StatementHandler {
