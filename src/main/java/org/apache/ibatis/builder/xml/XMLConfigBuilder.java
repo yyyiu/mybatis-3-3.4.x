@@ -104,6 +104,7 @@ public class XMLConfigBuilder extends BaseBuilder {
 
     /**
      * 对xml文件的Node进行解析
+     *
      * @param root
      */
     private void parseConfiguration(XNode root) {
@@ -414,7 +415,7 @@ public class XMLConfigBuilder extends BaseBuilder {
                         InputStream inputStream = Resources.getUrlAsStream(url);
                         XMLMapperBuilder mapperParser = new XMLMapperBuilder(inputStream, configuration, url, configuration.getSqlFragments());
                         mapperParser.parse();
-                        // 通过mapperClass查找
+                        // 通过class的全限定类名查找
                     } else if (resource == null && url == null && mapperClass != null) {
                         Class<?> mapperInterface = Resources.classForName(mapperClass);
                         configuration.addMapper(mapperInterface);

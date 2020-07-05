@@ -66,7 +66,7 @@ public class MapperProxy<T> implements InvocationHandler, Serializable {
         } catch (Throwable t) {
             throw ExceptionUtil.unwrapThrowable(t);
         }
-        // 从缓存中获取 MapperMethod 对象，若缓存未命中，则创建 MapperMethod 对象
+        // 从缓存中获取 MapperMethod 对象，若缓存中没有在进行创建并添加缓存
         final MapperMethod mapperMethod = cachedMapperMethod(method);
         // 调用 execute 方法执行 SQL
         return mapperMethod.execute(sqlSession, args);

@@ -34,6 +34,9 @@ import java.util.Set;
 public class MapperRegistry {
 
     private final Configuration config;
+    /**
+     * 用于注册Mapper接口对应的Class对象和MapperProxyFaction对象的对应关系
+     */
     private final Map<Class<?>, MapperProxyFactory<?>> knownMappers = new HashMap<Class<?>, MapperProxyFactory<?>>();
 
     public MapperRegistry(Configuration config) {
@@ -41,7 +44,7 @@ public class MapperRegistry {
     }
 
     /**
-     * 通过 MapperProxyFactory 通过jdk动态代理为接口生成代理对象
+     * 根据Class获取对应的Mapper动态代理对象
      * @param type
      * @param sqlSession
      * @param <T>
@@ -66,7 +69,8 @@ public class MapperRegistry {
     }
 
     /**
-     * MyBatis 在解析配置文件的 <mappers> 节点的过程中，会调用 MapperRegistry 的 addMapper 方法将 Class 到 MapperProxyFactory 对象的映射关系存入到 knownMappers
+     * MyBatis 在解析配置文件的 <mappers> 节点的过程中，
+     * 将 Class 和 MapperProxyFactory 对象的映射关系进行缓存
      * @param type
      * @param <T>
      */
@@ -77,6 +81,7 @@ public class MapperRegistry {
             }
             boolean loadCompleted = false;
             try {
+                // 为Mapper接口对应的Class创建一个MapperProxyFactory对象
                 knownMappers.put(type, new MapperProxyFactory<T>(type));
                 // It's important that the type is added before the parser is run
                 // otherwise the binding may automatically be attempted by the

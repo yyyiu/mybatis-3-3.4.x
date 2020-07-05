@@ -271,18 +271,19 @@ public class MapperMethod {
             return type;
         }
 
-        private MappedStatement resolveMappedStatement(Class<?> mapperInterface, String methodName,
-                                                       Class<?> declaringClass, Configuration configuration) {
+        private MappedStatement resolveMappedStatement(Class<?> mapperInterface, String methodName, Class<?> declaringClass, Configuration configuration) {
+            // 获取mapper的id
             String statementId = mapperInterface.getName() + "." + methodName;
             if (configuration.hasStatement(statementId)) {
+                // 如果configuration中有这个对象那那就拿
                 return configuration.getMappedStatement(statementId);
             } else if (mapperInterface.equals(declaringClass)) {
                 return null;
             }
             for (Class<?> superInterface : mapperInterface.getInterfaces()) {
+                //如果方法是在mapper父接口中定义的，则根据父接口获取对应MapperStatement对象
                 if (declaringClass.isAssignableFrom(superInterface)) {
-                    MappedStatement ms = resolveMappedStatement(superInterface, methodName,
-                            declaringClass, configuration);
+                    MappedStatement ms = resolveMappedStatement(superInterface, methodName, declaringClass, configuration);
                     if (ms != null) {
                         return ms;
                     }
@@ -322,13 +323,13 @@ public class MapperMethod {
             this.mapKey = getMapKey(method);
             this.returnsMap = this.mapKey != null;
             /*
-             * 获取 RowBounds 参数在参数列表中的位置，如果参数列表中
+             * 获取 RowBounds(用于分页处理) 参数在参数列表中的位置，如果参数列表中
              * 包含多个 RowBounds 参数，此方法会抛出异常
              */
             this.rowBoundsIndex = getUniqueParamIndex(method, RowBounds.class);
             // 获取 ResultHandler 参数在参数列表中的位置
             this.resultHandlerIndex = getUniqueParamIndex(method, ResultHandler.class);
-            // 解析参数列表
+            // 解析Mapper方法参数列表
             this.paramNameResolver = new ParamNameResolver(configuration, method);
         }
 

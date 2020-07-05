@@ -136,8 +136,11 @@ public abstract class BaseExecutor implements Executor {
 
     @Override
     public <E> List<E> query(MappedStatement ms, Object parameter, RowBounds rowBounds, ResultHandler resultHandler) throws SQLException {
+        // 获取对应的BoundSql对象，BoundSql对象是对动态Sql语句的解析和参数信息的封装
         BoundSql boundSql = ms.getBoundSql(parameter);
+        // 创建 CacheKey，用于缓存key
         CacheKey key = createCacheKey(ms, parameter, rowBounds, boundSql);
+        // 调用query
         return query(ms, parameter, rowBounds, resultHandler, key, boundSql);
     }
 
@@ -160,7 +163,7 @@ public abstract class BaseExecutor implements Executor {
                 // 存储过程相关处理逻辑
                 handleLocallyCachedOutputParameters(ms, key, parameter, boundSql);
             } else {
-                // 一级缓存未命中，则从数据库中查询
+                // 如果一级缓存不存在，则从数据库中查询
                 list = queryFromDatabase(ms, parameter, rowBounds, resultHandler, key, boundSql);
             }
         } finally {
