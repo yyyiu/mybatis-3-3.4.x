@@ -59,7 +59,9 @@ public abstract class BaseExecutor implements Executor {
     protected Executor wrapper;
 
     protected ConcurrentLinkedQueue<DeferredLoad> deferredLoads;
+    // 用来实现一级缓存，缓存mybatis的查询结果，如果localCacheScope属性设置为STATEMENT，则每次查询操作完成后，都会调用clearLocalCache()方法清空缓存
     protected PerpetualCache localCache;
+    // 缓存存储过程调用结果
     protected PerpetualCache localOutputParameterCache;
     protected Configuration configuration;
 

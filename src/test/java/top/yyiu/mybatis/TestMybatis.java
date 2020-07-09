@@ -61,6 +61,7 @@ public class TestMybatis {
     public void fun() {
         // SqlSession 是通过 JDK 动态代理的方式为接口生成代理对象的
         SqlSessionFactory sqlSessionFactory = initJava();
+        // mybatis的一级缓存是sqlSession级别的缓存，在BaseExecutor中使用PerpetualCache来实现
         SqlSession sqlSession = sqlSessionFactory.openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         userMapper.select();

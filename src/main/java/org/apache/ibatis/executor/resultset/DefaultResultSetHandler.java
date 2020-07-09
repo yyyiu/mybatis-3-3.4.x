@@ -343,10 +343,13 @@ public class DefaultResultSetHandler implements ResultSetHandler {
     //
 
     public void handleRowValues(ResultSetWrapper rsw, ResultMap resultMap, ResultHandler<?> resultHandler, RowBounds rowBounds, ResultMapping parentMapping) throws SQLException {
+        // 是否嵌套ResultMap
         if (resultMap.hasNestedResultMaps()) {
+            // 嵌套查询校验RowBounds
             ensureNoRowBounds();
+            // 校验ResultHandler
             checkResultHandler();
-            // 处理嵌套映射，关于嵌套映射本文就不分析了
+            // 如果嵌套ResultMap，那么处理嵌套映射
             handleRowValuesForNestedResultMap(rsw, resultMap, resultHandler, rowBounds, parentMapping);
         } else {
             // 处理简单映射
@@ -374,11 +377,11 @@ public class DefaultResultSetHandler implements ResultSetHandler {
         DefaultResultContext<Object> resultContext = new DefaultResultContext<Object>();
         // 根据 RowBounds 定位到指定行记录
         skipRows(rsw.getResultSet(), rowBounds);
-        // 检测是否还有更多行的数据需要处理
+        // 遍历处理每一行记录
         while (shouldProcessMoreRows(resultContext, rowBounds) && rsw.getResultSet().next()) {
-            // 获取经过鉴别器处理后的 ResultMap
+            // 对<discriminated>标签进行鉴别器处理，获取处理后的 ResultMap
             ResultMap discriminatedResultMap = resolveDiscriminatedResultMap(rsw.getResultSet(), resultMap, null);
-            // 从 resultSet 中获取结果
+            // 从 resultSet 中获取结果，转为java对象
             Object rowValue = getRowValue(rsw, discriminatedResultMap);
             // 存储结果
             storeObject(resultHandler, resultContext, rowValue, parentMapping, rsw.getResultSet());
