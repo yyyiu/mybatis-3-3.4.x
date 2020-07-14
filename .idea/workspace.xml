@@ -20,16 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8153956-79f9-4bb6-83a8-d0ef5cf60dd8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/IUserMapperSql.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/nodelet_test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/StaticSqlSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/StaticSqlSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/annotation/ProviderSqlSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/annotation/ProviderSqlSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/resultset/DefaultResultSetHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/BoundSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/BoundSql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/SqlSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/SqlSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/defaults/RawSqlSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/defaults/RawSqlSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/xmltags/DynamicSqlSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/xmltags/DynamicSqlSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/top/yyiu/mybatis/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/yyiu/mybatis/dao/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/TestMybatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/TestMybatis.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +73,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -95,14 +92,14 @@
       <recent name="top.yyiu.mybatis.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\code\mybatis-3-3.4.x\src\test" />
       <recent name="D:\code\source\mybatis-3-3.4.x\src\test\java\top\yyiu\mybatis" />
       <recent name="D:\code\source\mybatis-3-3.4.x\src\main\java" />
       <recent name="D:\code\source\mybatis-3-3.4.x\src\test\java\top\yyiu\mybatis\dao" />
       <recent name="D:\code\source\mybatis-3-3.4.x\src\test\java\top\yyiu\mybatis\entity" />
-      <recent name="D:\code\source\mybatis-3-3.4.x\src\test\top\yyiu\mybatis" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MetaObjectTest.shouldGetAndSetField">
+  <component name="RunManager" selected="JUnit.TestMybatis.fun">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="top.yyiu.mybatis.Test" />
       <module name="mybatis" />
@@ -150,8 +147,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MetaObjectTest.shouldGetAndSetField" />
         <item itemvalue="JUnit.TestMybatis.fun" />
+        <item itemvalue="JUnit.MetaObjectTest.shouldGetAndSetField" />
         <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
@@ -177,6 +174,8 @@
       <workItem from="1593861813851" duration="763000" />
       <workItem from="1593913138542" duration="7015000" />
       <workItem from="1594262313430" duration="5264000" />
+      <workItem from="1594599976805" duration="1842000" />
+      <workItem from="1594696926544" duration="11507000" />
     </task>
     <servers />
   </component>
@@ -216,22 +215,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="765" y="451" key="#xdebugger.evaluate/0.0.1920.1050@0.0.1920.1050" timestamp="1592578140903" />
-    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1593563971042">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1594603300884">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1593563971042" />
-    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1593563971042">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1594603300884" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1594603300884">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1593563971042" />
-    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1593563971042">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1594603300884" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1594603300884">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1593563971042" />
-    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1593563971042">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1594603300884" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1594603300884">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593563971042" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1594603300884" />
     <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1593563971042">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -248,18 +247,18 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593563971042" />
-    <state x="540" y="258" key="IDE.errors.dialog" timestamp="1593568436410">
+    <state x="540" y="258" key="IDE.errors.dialog" timestamp="1594708480129">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="540" y="258" key="IDE.errors.dialog/0.0.1920.1050@0.0.1920.1050" timestamp="1593568436410" />
+    <state x="540" y="258" key="IDE.errors.dialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594708480129" />
     <state x="440" y="99" key="SettingsEditor" timestamp="1588569041863">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="440" y="99" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1588569041863" />
-    <state x="681" y="266" width="582" height="524" key="StructurePopup" timestamp="1594278081026">
+    <state x="681" y="266" width="582" height="524" key="StructurePopup" timestamp="1594708556856">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="681" y="266" width="582" height="524" key="StructurePopup/0.0.1920.1050@0.0.1920.1050" timestamp="1594278081026" />
+    <state x="681" y="266" width="582" height="524" key="StructurePopup/0.0.1920.1050@0.0.1920.1050" timestamp="1594708556856" />
     <state x="716" y="368" key="cloudConfig.PluginsDialog" timestamp="1593563392000">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -276,14 +275,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="661" y="256" width="598" height="562" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1588676797401" />
-    <state width="634" height="239" key="javadoc.popup.new" timestamp="1594267176930">
+    <state width="812" height="239" key="javadoc.popup.new" timestamp="1594716348557">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="634" height="239" key="javadoc.popup.new/0.0.1920.1050@0.0.1920.1050" timestamp="1594267176930" />
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1594277531281">
+    <state width="812" height="239" key="javadoc.popup.new/0.0.1920.1050@0.0.1920.1050" timestamp="1594716348557" />
+    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1594600845192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1594277531281" />
+    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1594600845192" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

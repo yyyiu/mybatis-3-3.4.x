@@ -91,6 +91,10 @@ public class XMLConfigBuilder extends BaseBuilder {
         this.parser = parser;
     }
 
+    /**
+     * 解析配置文件
+     * @return
+     */
     public Configuration parse() {
         // 防止一个Configuration被创建多次
         if (parsed) {
@@ -109,7 +113,7 @@ public class XMLConfigBuilder extends BaseBuilder {
      */
     private void parseConfiguration(XNode root) {
         try {
-            // 首先读取 properties 文件
+            // 首先解析properties结点，在这个节点下面可以导入其他properties文件，它自己一般属性就是name和value，相当于一个map对象
             propertiesElement(root.evalNode("properties"));
             // 解析 settings 配置，并将其转换为 Properties 对象
             Properties settings = settingsAsProperties(root.evalNode("settings"));

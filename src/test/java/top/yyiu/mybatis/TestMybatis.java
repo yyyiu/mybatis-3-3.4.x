@@ -49,9 +49,14 @@ public class TestMybatis {
      * @return sqlSessionFactory
      * @throws IOException
      */
-    public static SqlSessionFactory initXml() throws IOException {
+    public static SqlSessionFactory initXml() {
         String resource = "mybatis-config.xml";
-        InputStream inputStream = Resources.getResourceAsStream(resource);
+        InputStream inputStream = null;
+        try {
+            inputStream = Resources.getResourceAsStream(resource);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         return sqlSessionFactory;
     }
@@ -60,7 +65,7 @@ public class TestMybatis {
     @Test
     public void fun() {
         // SqlSession 是通过 JDK 动态代理的方式为接口生成代理对象的
-        SqlSessionFactory sqlSessionFactory = initJava();
+        SqlSessionFactory sqlSessionFactory = initXml();
         // mybatis的一级缓存是sqlSession级别的缓存，在BaseExecutor中使用PerpetualCache来实现
         SqlSession sqlSession = sqlSessionFactory.openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
@@ -78,7 +83,7 @@ public class TestMybatis {
             MappedStatement listAllStms = configuration.getMappedStatement("这个是mapper中的查询id，写全路径名称");
             List<Object> list = executor.query(listAllStms, null, RowBounds.DEFAULT, Executor.NO_RESULT_HANDLER);//直接操作数据库
             System.out.println(list);
-        } catch (IOException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

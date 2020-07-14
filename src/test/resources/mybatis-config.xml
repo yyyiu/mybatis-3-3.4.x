@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--<properties resource="application.properties" url="">
+        <property name="jdbc.username" value="${jdbc.username}"/>
+    </properties>-->
+    <!--<settings> 全局配置参数，比如下面这个是否开启二级缓存
+            <setting name="cacheEnabled" value="true"/>
+        </settings>
+    -->
+    <!--<objectFactory type=""></objectFactory>-->
+    <!--<objectWrapperFactory type=""/>-->
+    <!--<typeAliases> 定义别名
+            <typeAlias type="top.yyiu.mybatis.DataSourceFactory" alias="dataSourceFactory"/>
+            <package name="top.yyiu"/>
+        </typeAliases>
+    -->
+    <!--<typeHandlers> 类型转换器
+            <typeHandler handler="StringHandler" javaType="String" jdbcType="String"/>
+            <package name="top.yyiu"/>
+        </typeHandlers>
+    -->
+    <environments default="development"><!-- 环境 -->
+        <environment id="development">
+            <transactionManager type="JDBC"/> <!-- 事务管理器 -->
+            <dataSource type="POOLED"><!-- 数据库连接池 -->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/leyou"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="IUserMapperSql.xml"/>
+        <!--<mapper url="xx/xxx/xxx.xml"/>
+            <mapper class="IUserMapper.class"/>
+            <package name="top.yyiu"/>
+        -->
+    </mappers>
+</configuration>

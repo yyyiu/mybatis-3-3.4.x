@@ -19,4 +19,7 @@ public interface UserMapper {
     @Select("select id,username,password from mybatisuser")
     public List<UserEntity> select();
 
+    public int count1();
+
+
 }
