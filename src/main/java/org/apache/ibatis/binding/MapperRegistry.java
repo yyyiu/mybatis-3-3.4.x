@@ -57,7 +57,7 @@ public class MapperRegistry {
             throw new BindingException("Type " + type + " is not known to the MapperRegistry.");
         }
         try {
-            // 创建代理对象
+            // 创建Mapper的代理对象
             return mapperProxyFactory.newInstance(sqlSession);
         } catch (Exception e) {
             throw new BindingException("Error getting mapper instance. Cause: " + e, e);
@@ -86,8 +86,8 @@ public class MapperRegistry {
                 // It's important that the type is added before the parser is run
                 // otherwise the binding may automatically be attempted by the
                 // mapper parser. If the type is already known, it won't try.
-                MapperAnnotationBuilder parser = new MapperAnnotationBuilder(config, type);
-                parser.parse();
+                MapperAnnotationBuilder parser = new MapperAnnotationBuilder(config, type);//添加注解select、update、delete、insert
+                parser.parse();// 对这个mapper和它对应的xml文件进行解析，包括解析每个方法对应的sql和id
                 loadCompleted = true;
             } finally {
                 if (!loadCompleted) {

@@ -20,6 +20,9 @@
             <package name="top.yyiu"/>
         </typeHandlers>
     -->
+<!--    <plugins>-->
+<!--        <plugin interceptor="top.yyiu.mybatis.plugin.InterceptionPlug"></plugin>-->
+<!--    </plugins>-->
     <environments default="development"><!-- 环境 -->
         <environment id="development">
             <transactionManager type="JDBC"/> <!-- 事务管理器 -->

@@ -131,7 +131,7 @@ public class XMLConfigBuilder extends BaseBuilder {
             // 解析 databaseIdProvider，获取并设置 databaseId 到 Configuration 对象
             databaseIdProviderElement(root.evalNode("databaseIdProvider"));
             typeHandlerElement(root.evalNode("typeHandlers"));
-            /*解析mappers*/
+            /*解析mappers，这里会创建mapper对应的MapperProxyFactory对象*/
             mapperElement(root.evalNode("mappers"));
         } catch (Exception e) {
             throw new BuilderException("Error parsing SQL Mapper Configuration. Cause: " + e, e);

@@ -48,11 +48,11 @@ public class Plugin implements InvocationHandler {
      *     ParameterHandler.class : [getParameterObject, setParameters]
      * }
      */
-    Map<Class<?>, Set<Method>> signatureMap = getSignatureMap(interceptor);
+    Map<Class<?>, Set<Method>> signatureMap = getSignatureMap(interceptor);// 获取了要拦截器要进行拦截对应的方法
     Class<?> type = target.getClass();
     Class<?>[] interfaces = getAllInterfaces(type, signatureMap);
     if (interfaces.length > 0) {
-      // 如果是接口那么使用动态代理返回代理对象
+      // 返回的是拦截器的代理对象
       return Proxy.newProxyInstance(
           type.getClassLoader(),
           interfaces,
@@ -82,12 +82,12 @@ public class Plugin implements InvocationHandler {
   }
 
   private static Map<Class<?>, Set<Method>> getSignatureMap(Interceptor interceptor) {
-    Intercepts interceptsAnnotation = interceptor.getClass().getAnnotation(Intercepts.class);
+    Intercepts interceptsAnnotation = interceptor.getClass().getAnnotation(Intercepts.class);// 获取拦截器的注解信息
     // issue #251
     if (interceptsAnnotation == null) {
       throw new PluginException("No @Intercepts annotation was found in interceptor " + interceptor.getClass().getName());      
     }
-    Signature[] sigs = interceptsAnnotation.value();
+    Signature[] sigs = interceptsAnnotation.value();//获取注解信息里面的value
     Map<Class<?>, Set<Method>> signatureMap = new HashMap<Class<?>, Set<Method>>();
     for (Signature sig : sigs) {
       Set<Method> methods = signatureMap.get(sig.type());

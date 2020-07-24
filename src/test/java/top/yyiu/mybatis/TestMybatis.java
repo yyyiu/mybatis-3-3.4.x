@@ -38,7 +38,7 @@ public class TestMybatis {
         TransactionFactory transactionFactory = new JdbcTransactionFactory();
         Environment environment = new Environment("development", transactionFactory, dataSource);
         Configuration configuration = new Configuration(environment);
-        // configuration.addInterceptor(new InterceptionPlug());// 添加拦截器
+         configuration.addInterceptor(new InterceptionPlug());// 添加拦截器
         configuration.addMapper(UserMapper.class);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
         return sqlSessionFactory;
@@ -68,10 +68,11 @@ public class TestMybatis {
         SqlSessionFactory sqlSessionFactory = initXml();
         // mybatis的一级缓存是sqlSession级别的缓存，在BaseExecutor中使用PerpetualCache来实现
         SqlSession sqlSession = sqlSessionFactory.openSession();
+        //获取对应的mapper代理对象
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-        userMapper.select();
-        System.out.println(userMapper.count());
-        userMapper.select();
+        userMapper.select(1);//其实这里调用的是代理对象MapperProxy的invoke方法
+//        System.out.println(userMapper.count());
+//        userMapper.select();
     }
 
     public void testExecutor(){

@@ -88,10 +88,10 @@ public class MapperMethod {
                 } else if (method.returnsMany()) {
                     // 执行查询操作，并返回多个结果
                     result = executeForMany(sqlSession, args);
-                } else if (method.returnsMap()) {
+                } else if (method.returnsMap()) {//返回的是map
                     // 执行查询操作，并将结果封装在 Map 中返回
                     result = executeForMap(sqlSession, args);
-                } else if (method.returnsCursor()) {
+                } else if (method.returnsCursor()) {//返回的是cursor
                     // 执行查询操作，并返回一个 Cursor 对象
                     result = executeForCursor(sqlSession, args);
                 } else {
@@ -156,7 +156,7 @@ public class MapperMethod {
 
     private <E> Object executeForMany(SqlSession sqlSession, Object[] args) {
         List<E> result;
-        Object param = method.convertArgsToSqlCommandParam(args);
+        Object param = method.convertArgsToSqlCommandParam(args);//将参数转化为sql的param
         if (method.hasRowBounds()) {
             RowBounds rowBounds = method.extractRowBounds(args);
             result = sqlSession.<E>selectList(command.getName(), param, rowBounds);

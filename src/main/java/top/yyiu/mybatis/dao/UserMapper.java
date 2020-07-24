@@ -1,5 +1,6 @@
 package top.yyiu.mybatis.dao;
 
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import top.yyiu.mybatis.entity.UserEntity;
 
@@ -16,8 +17,8 @@ public interface UserMapper {
     @Select("select count(*) from mybatisuser")
     public int count();
 
-    @Select("select id,username,password from mybatisuser")
-    public List<UserEntity> select();
+    @Select("select id,username,password from mybatisuser where id=?")
+    public List<UserEntity> select(@Param("id") int id);
 
     public int count1();
 

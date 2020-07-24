@@ -43,7 +43,7 @@ public class DefaultSqlSessionFactory implements SqlSessionFactory {
     }
 
     @Override
-    public SqlSession openSession() {
+    public SqlSession openSession() {//默认的Executor是SIMPLE类型的
         return openSessionFromDataSource(configuration.getDefaultExecutorType(), null, false);
     }
 
@@ -92,10 +92,11 @@ public class DefaultSqlSessionFactory implements SqlSessionFactory {
         try {
             // 获取mybatis主配置文件的环境信息
             final Environment environment = configuration.getEnvironment();
-            // 创建事务管理器工厂，然后创建事务管理器，要么是 JdbcTransaction，要么是 ManagedTransaction。
+            // 创建事务管理器工厂，然后创建事务管理器，
+            // 如果environment为空或者这environment下面没有配那就默认为ManagedTransactionFactory，否则就是对应的TransactionFactory也就是JdbcTransaction
             final TransactionFactory transactionFactory = getTransactionFactoryFromEnvironment(environment);
             tx = transactionFactory.newTransaction(environment.getDataSource(), level, autoCommit);
-            // 创建 Executor 和 DefaultSqlSession
+            // 创建对应的 Executor 和 DefaultSqlSession
             final Executor executor = configuration.newExecutor(tx, execType);
             return new DefaultSqlSession(configuration, executor, autoCommit);
         } catch (Exception e) {

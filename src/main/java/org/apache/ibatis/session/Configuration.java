@@ -677,6 +677,14 @@ public class Configuration {
         return newExecutor(transaction, defaultExecutorType);
     }
 
+    /**
+     * 创建对应的Executor对象，如果没有指定类型会创建默认类型SIMPLE，
+     * 然后会判断有没有开启缓存，开启了缓存会创建CachingExecutor。
+     * 最后还要添加拦截器也就是插件
+     * @param transaction
+     * @param executorType
+     * @return
+     */
     public Executor newExecutor(Transaction transaction, ExecutorType executorType) {
         executorType = executorType == null ? defaultExecutorType : executorType;
         executorType = executorType == null ? ExecutorType.SIMPLE : executorType;

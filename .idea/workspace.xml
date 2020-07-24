@@ -20,14 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8153956-79f9-4bb6-83a8-d0ef5cf60dd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/IUserMapperSql.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/nodelet_test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/annotation/MapperAnnotationBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/annotation/MapperAnnotationBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BaseExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/CachingExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/plugin/InterceptorChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/plugin/InterceptorChain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/plugin/Plugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/plugin/Plugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/top/yyiu/mybatis/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/yyiu/mybatis/dao/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/TestMybatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/TestMybatis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/IUserMapperSql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/IUserMapperSql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,6 +185,7 @@
       <workItem from="1594262313430" duration="5264000" />
       <workItem from="1594599976805" duration="1842000" />
       <workItem from="1594696926544" duration="11507000" />
+      <workItem from="1595485011120" duration="7551000" />
     </task>
     <servers />
   </component>
@@ -215,38 +225,38 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="765" y="451" key="#xdebugger.evaluate/0.0.1920.1050@0.0.1920.1050" timestamp="1592578140903" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1594603300884">
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1595492576352">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1594603300884" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1594603300884">
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
+    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1595492576352">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1594603300884" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1594603300884">
+    <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
+    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1595492576352">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1594603300884" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1594603300884">
+    <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
+    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1595492576352">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1594603300884" />
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1593563971042">
+    <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1595492576352">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1593563971042" />
-    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1593563971042">
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1595492576352">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1593563971042" />
-    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1593563971042">
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1595492576352">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1593563971042" />
-    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1593563971042">
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1595492576352">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593563971042" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
     <state x="540" y="258" key="IDE.errors.dialog" timestamp="1594708480129">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -275,14 +285,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="661" y="256" width="598" height="562" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1588676797401" />
-    <state width="812" height="239" key="javadoc.popup.new" timestamp="1594716348557">
+    <state width="812" height="239" key="javadoc.popup.new" timestamp="1595487152793">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="812" height="239" key="javadoc.popup.new/0.0.1920.1050@0.0.1920.1050" timestamp="1594716348557" />
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1594600845192">
+    <state width="812" height="239" key="javadoc.popup.new/0.0.1920.1050@0.0.1920.1050" timestamp="1595487152793" />
+    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1595492199476">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1594600845192" />
+    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1595492199476" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -301,6 +311,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/apache/ibatis/reflection/MetaObjectTest.java</url>
           <line>40</line>
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/scripting/defaults/RawSqlSource.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -160,12 +160,12 @@ public abstract class BaseExecutor implements Executor {
         try {
             queryStack++;
             // 从一级缓存中获取缓存项
-            list = resultHandler == null ? (List<E>) localCache.getObject(key) : null;
+            list = resultHandler == null ? (List<E>) localCache.getObject(key) : null;//先走缓存，缓存没有在查数据库
             if (list != null) {
                 // 存储过程相关处理逻辑
                 handleLocallyCachedOutputParameters(ms, key, parameter, boundSql);
             } else {
-                // 如果一级缓存不存在，则从数据库中查询
+                // 如果一级缓存不存在，则从数据库中查询，而且还要把本次查询结果缓存到缓存中
                 list = queryFromDatabase(ms, parameter, rowBounds, resultHandler, key, boundSql);
             }
         } finally {

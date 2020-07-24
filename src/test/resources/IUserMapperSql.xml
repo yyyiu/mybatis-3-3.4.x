@@ -26,8 +26,8 @@
         <result column="password" property="password" jdbcType="VARCHAR" javaType="string"/>
     </resultMap>
 
-    <select id="count1" resultType="int">
-        select id,username,password from mybatisuser
+    <select id="count1" resultType="int" parameterType="int">
+        select id,username,password from mybatisuser where id=${id}
     </select>
 
 

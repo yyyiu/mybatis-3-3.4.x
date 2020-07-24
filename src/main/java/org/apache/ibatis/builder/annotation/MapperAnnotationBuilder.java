@@ -131,7 +131,7 @@ public class MapperAnnotationBuilder {
         try {
           // issue #237
           if (!method.isBridge()) {
-            parseStatement(method);
+            parseStatement(method);// 对方法和对应的sql语句进行解析，包括对应的id，返回的类型
           }
         } catch (IncompleteElementException e) {
           configuration.addIncompleteMethod(new MethodResolver(this, method));

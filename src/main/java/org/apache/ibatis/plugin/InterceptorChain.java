@@ -30,7 +30,7 @@ public class InterceptorChain {
     // 对拦截器进行遍历
     for (Interceptor interceptor : interceptors) {
       // 调用plugin方法
-      target = interceptor.plugin(target);
+      target = interceptor.plugin(target);//返回了拦截器的代理类
     }
     return target;
   }
