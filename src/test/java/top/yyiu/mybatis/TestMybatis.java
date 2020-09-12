@@ -70,7 +70,8 @@ public class TestMybatis {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         //获取对应的mapper代理对象
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-        userMapper.select(1);//其实这里调用的是代理对象MapperProxy的invoke方法
+        userMapper.selectByName("54 or 1=1");
+        //userMapper.select(1);//其实这里调用的是代理对象MapperProxy的invoke方法
 //        System.out.println(userMapper.count());
 //        userMapper.select();
     }

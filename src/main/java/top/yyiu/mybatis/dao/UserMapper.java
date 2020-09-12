@@ -22,5 +22,8 @@ public interface UserMapper {
 
     public int count1();
 
+    @Select("select id,username,password from mybatisuser where username=#{username}")
+    public List<UserEntity> selectByName(@Param("username") String username);
+
 
 }

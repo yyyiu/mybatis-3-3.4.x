@@ -20,4 +20,8 @@ public interface UserMapper {
     @Select("select id,username,password from mybatisuser where id=#{id}")
     public List<UserEntity> select(@Param("id") int id);
 
+    @Select("select id,username,password from mybatisuser where username=${username}")
+    public List<UserEntity> selectByName(@Param("username") String username);
+
+
 }
