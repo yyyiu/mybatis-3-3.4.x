@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,10 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8153956-79f9-4bb6-83a8-d0ef5cf60dd8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/top/yyiu/mybatis/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/top/yyiu/mybatis/dao/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/TestMybatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/TestMybatis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/top/yyiu/mybatis/dao/UserMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../changku/apache-maven-3.5.3-bin/apache-maven-3.5.3" />
+        <option name="mavenHome" value="E:/changku/apache-maven-3.5.3-bin/apache-maven-3.5.3" />
         <option name="userSettingsFile" value="E:\changku\apache-maven-3.5.3-bin\apache-maven-3.5.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -69,13 +71,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -149,6 +151,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>C:\Users\pc\AppData\Roaming\Subversion</configuration>
   </component>
@@ -174,11 +177,14 @@
       <workItem from="1594696926544" duration="11507000" />
       <workItem from="1595485011120" duration="7551000" />
       <workItem from="1596167592593" duration="2287000" />
+      <workItem from="1604140956543" duration="1585000" />
+      <workItem from="1604143699317" duration="3287000" />
+      <workItem from="1613570384024" duration="2106000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -191,96 +197,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="337" y="366" key="#SQL_Dialects" timestamp="1588563285196">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="337" y="366" key="#SQL_Dialects/0.0.1920.1050@0.0.1920.1050" timestamp="1588563285196" />
-    <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588563252710">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588563252710" />
-    <state x="765" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1588579676777">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="765" y="208" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1588579676777" />
-    <state x="199" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588571988199">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="199" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588571988199" />
-    <state x="765" y="451" key="#xdebugger.evaluate" timestamp="1592578140903">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="765" y="451" key="#xdebugger.evaluate/0.0.1920.1050@0.0.1920.1050" timestamp="1592578140903" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1596188147340">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1596188147340" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1596188147340">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1596188147340" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1596188147339">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1596188147339" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1596188147340">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1596188147340" />
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1595492576352">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
-    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1595492576352">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
-    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1595492576352">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
-    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1595492576352">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1595492576352" />
-    <state x="540" y="258" key="IDE.errors.dialog" timestamp="1594708480129">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="540" y="258" key="IDE.errors.dialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594708480129" />
-    <state x="440" y="99" key="SettingsEditor" timestamp="1588569041863">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="440" y="99" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1588569041863" />
-    <state x="681" y="266" width="582" height="524" key="StructurePopup" timestamp="1594708556856">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="681" y="266" width="582" height="524" key="StructurePopup/0.0.1920.1050@0.0.1920.1050" timestamp="1594708556856" />
-    <state x="716" y="368" key="cloudConfig.PluginsDialog" timestamp="1593563392000">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="716" y="368" key="cloudConfig.PluginsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1593563392000" />
-    <state x="823" y="368" key="cloudConfig.SelfSettingsDialog" timestamp="1593563375970">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="823" y="368" key="cloudConfig.SelfSettingsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1593563375970" />
-    <state x="499" y="253" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1593487363142">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="499" y="253" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1050@0.0.1920.1050" timestamp="1593487363142" />
-    <state x="661" y="256" width="598" height="562" key="find.popup" timestamp="1588676797401">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="661" y="256" width="598" height="562" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1588676797401" />
-    <state width="812" height="239" key="javadoc.popup.new" timestamp="1595487152793">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="812" height="239" key="javadoc.popup.new/0.0.1920.1050@0.0.1920.1050" timestamp="1595487152793" />
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1595492199476">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="1065" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1595492199476" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -309,12 +225,12 @@
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo typeName="org.apache.ibatis.reflection.MetaObject" fieldName="reflectorFactory" />
-        <PinnedItemInfo typeName="org.apache.ibatis.reflection.MetaObject" fieldName="objectFactory" />
-        <PinnedItemInfo typeName="org.apache.ibatis.logging.jdbc.ResultSetLogger" fieldName="rows" />
-        <PinnedItemInfo typeName="org.apache.ibatis.executor.resultset.DefaultResultSetHandler$UnMappedColumnAutoMapping" fieldName="typeHandler" />
-        <PinnedItemInfo typeName="org.apache.ibatis.reflection.MetaObject" fieldName="objectWrapper" />
+        <PinnedItemInfo />
       </pinned-members>
     </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
